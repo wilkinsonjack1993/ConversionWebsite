@@ -9,13 +9,18 @@ mongoose.connect('mongodb://localhost/conversion-website');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+// #############  ROUTERS ######################################
+
 // Redirect weight api requests to route/weight.js
 var Weight = require('./route/weight');
 app.use('/api/weight', Weight);
 
 // Redirect length api requests to route/length.js
-var Length = require('./route/length');
+var Length = require('./route/lengthRoute');
 app.use('/api/length', Length);
+
+//##############################################################
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
