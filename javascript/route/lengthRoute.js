@@ -11,7 +11,12 @@ router.get('/getAll', function(req, res) {
 // Handle post requests to insert new length
 // Return newly inserted length record.
 router.post('/insert', function(req, res) {
-  LengthService.insertLength(req, res);
+  LengthService.insertLength (req, res);
+});
+
+// Handle convert reques returning an external length object.
+router.post('/convert', function (req, res) {
+  LengthService.convertLength (req, res);
 });
 
 // Export router

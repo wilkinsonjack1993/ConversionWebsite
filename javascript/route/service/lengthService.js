@@ -12,4 +12,10 @@ exports.insertLength = function(req, res) {
   LengthAccess.insert(req, res);
 }
 
+// Call convert length
+exports.convertLength =  function (req, res) {
+  LengthAccess.convertLength(req, res);
+}
+
+
 module.exports = exports;
