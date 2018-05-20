@@ -39,7 +39,6 @@ exports.getLength = function (req, res, callback) {
       console.log(err.message);
       res.status(500).send({error: "Could not fetch lengths"});
     } else {
-      console.log(lengths);
       res.send(lengths);
     }
   });
